@@ -1,0 +1,133 @@
+.canvas_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: fit-content;
+}
+
+.canvas_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas_wrap h2 {
+    margin-top: 10px;
+}
+
+.canvas_container button {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
+    background: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition-duration: .3s;
+}
+
+.canvas_container button:hover {
+    background: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+canvas {
+    background-color: gray;
+    box-shadow: 10px 10px 10px rgb(225, 237, 255);
+}
+
+.options_container {
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.options_container > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.options_container h4 {
+    text-align: center;
+}
+
+.tickInput {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.tickSpeed {
+    text-align: center;
+    color: black;
+}
+
+.css-b62m3t-container {
+    width: 110px;
+}
+
+.presetTitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.tickSelectWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1030px) {
+    .canvas_container {
+        width: 55%;
+    }
+}
+
+@media (max-width: 935px) {
+    .canvas_container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .options_container {
+        margin-left: 5%;
+    }
+    .css-b62m3t-container {
+        width: 180px;
+    }
+}
+
+@media (max-width: 630px) {
+    .canvas_container {
+        flex-direction: column-reverse;
+    }
+    .options_container {
+        flex-direction: row;
+        height: fit-content;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .options_container div:nth-child(1) {
+        flex-direction: row;
+    }
+    .canvas_container button:first-of-type {
+        margin-right: 5px;
+    }
+    .canvas_container button:last-of-type {
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .presetTitle {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500&display=swap');
+
+#root {
+  height: 100vh;
+}
+
+html {
+  background-color: #e5e5f7;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px), repeating-linear-gradient(#444df71e, #444df722);
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+p, span {
+  font-family: 'Source Sans 3', sans-serif;
+}
