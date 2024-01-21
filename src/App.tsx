@@ -22,7 +22,7 @@ function App() {
   return (
     <screenWidthContext.Provider value={screenWidth}>
       <div className="app">
-        <h1 id="title">Conway's Game of Life</h1>
+        <h1 id="title">Conway's{screenWidth < 450 && <br/>} Game of Life</h1>
         <p id="intro">is a cellular automaton designed by the British mathemetician John Conway. </p>
         <div className="appContainer">
           <Description />

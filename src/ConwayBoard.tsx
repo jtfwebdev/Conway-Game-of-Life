@@ -7,13 +7,31 @@ const ConwayBoard = () => {
 
     const screenWidth = useContext(screenWidthContext);
 
-    const [WIDTH, setWIDTH] = useState<number>(400);
-    const HEIGHT = 400;
-    const CELL_SIZE = 8;
+    const [WIDTH, setWIDTH] = useState<number>(screenWidth > 420 ? 400 : 300);
+    const [HEIGHT, setHEIGHT] = useState<number>(screenWidth > 420 ? 400 : 300);
+    const [CELL_SIZE, setCELL_SIZE] = useState<number>(screenWidth > 420 ? 8 : 6);
     const NUM_ROWS = WIDTH / CELL_SIZE;
     const NUM_COLS = HEIGHT / CELL_SIZE;
     const [tickTime, setTickTime] = useState<number>(100);
     const [generation, setGeneration] = useState<number>(0);
+
+    useEffect(() => {
+        const resizeListener = () => {
+            if (window.innerWidth > 420) {
+                setWIDTH(400);
+                setHEIGHT(400);
+                setCELL_SIZE(8);
+            } else {
+                setWIDTH(300);
+                setHEIGHT(300);
+                setCELL_SIZE(6);
+            }
+        }
+
+        window.addEventListener("resize", resizeListener);
+
+        return () => window.removeEventListener("resize", resizeListener);
+    }, []);
 
     const colours = ["black", "white"];
 
